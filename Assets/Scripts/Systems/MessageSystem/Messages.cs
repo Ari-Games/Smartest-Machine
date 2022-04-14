@@ -22,8 +22,6 @@ public class Messages : ScriptableObject
             return "";
         }
         var message = data[index];
-        index++;
-        Debug.LogFormat("Index: {0}, Message: {1}", index, message);
         return message;
     }
 }

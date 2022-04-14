@@ -15,6 +15,26 @@ public static class Extensions
         return res;
     }
 
+    public static T Random<T>(this T[] array)
+    {
+        if (array.Length == 0)
+        {
+            return default(T);
+        }
+
+        return array[UnityEngine.Random.Range(0, array.Length)];
+    }
+
+    public static T Random<T>(this List<T> list)
+    {
+        if (list.Count == 0)
+        {
+            return default(T);
+        }
+
+        return list[UnityEngine.Random.Range(0, list.Count)];
+    }
+
     public static T Random<T>(this IEnumerable<T> ienumerable)
     {
         if (ienumerable.Count() == 0)
